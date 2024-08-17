@@ -1,0 +1,33 @@
+@font-face {
+    font-family: tcc;
+    src : url(../font/DFT_KW3.ttc);
+}
+
+body{
+    font-family: tcc;
+    background-color: green;
+    color: white;
+    text-shadow: 10px ;
+}
+
+ul {
+    list-style-type: none;
+}
+li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.clock {
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+  font-size: xx-large;
+  font-weight: bolder;
+}
+
+.const {
+    text-align: center;
+    font-size: 25px;
+}

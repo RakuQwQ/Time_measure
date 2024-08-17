@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<head>  
+    <title>加班啦你！</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+    <body>
+
+
+        
+        <h1>加班計時器</h1>
+        <label>金額：</label>
+        <input id="amount">
+
+        <select id="currency">
+            <option value="1">香港</option> //firm
+            <option value="0.24">台灣</option>
+            <option value="1.07256">人民幣</option> //firm
+            <option value="7.807">美國</option>
+            <option value="0.05073">日本</option>
+            <option value="10.04">英國</option>
+            <option value="0.0003083">越南</option>
+            <option value="1.68">馬來西亞</option>
+            <option value="5.65443">加拿大 </option> //firm
+            <option value="5.12805">澳洲</option> //firm
+            <option value="4.33">德國</option> //firm
+            <option value="0.00438">意大利</option> //firm
+            <option value="0.77">法國</option> //firm
+            <option value="0.22">泰國</option> //firm
+            <option value="8.48">歐盟 </option> //firm 
+            <option value="1.13742">丹麥</option> //firm
+        </select>
+        <span id="result"></span>
+        <button id="submit">加班嚕～</button>
+
+        <br><br>
+
+        <label>時間：</label>
+        <input id="time_modify">
+        <select id="time_unit">
+            <option value="1">秒</option>
+            <option value="60">分鐘</option>
+            <option value="3600">小時</option>
+            <option value="86400">日</option>
+        </select>
+        <button id="add_time">加時間</button>
+        <button id="remove_time">減時間</button>
+
+        <br><br>
+
+        <button id="time_stop">時間停止</button>
+        <button id="continue">時間開始</button>
+
+
+
+        <h1>加班時間：</h1>
+        <div class="clock">
+            <ul>
+                <li id="display_day"></li>
+                <li class="const">日</li>
+                <li id="display_hr"></li>
+                <li class="const">時</li>
+                <li id="display_min"></li>
+                <li class="const">分</li>
+                <li id="display_sec"></li>
+                <li class="const">秒</li>
+            </ul>
+        </div>
+
+        <script src="index.js"></script>
+    </body>
+</html>
