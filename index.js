@@ -53,8 +53,9 @@ document.getElementById("remove_time").onclick = function clock(){
     let time_amount = document.getElementById("time_modify").value;
     let time_unit = document.getElementById("time_unit").value;
 
-    if (total_time > time_amount){
     time_amount = time_amount * time_unit; 
+    
+    if (total_time > time_amount){
     total_time -= time_amount;
     } else if (total_time <= time_amount){
         total_time = 0;
