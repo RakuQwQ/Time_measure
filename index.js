@@ -41,26 +41,41 @@ document.getElementById("submit").onclick = function clock(){
     }
 }
 
-document.getElementById("add_time").onClick = function clock(){
-    let time_amount = document.getElementById("time_modify").value;
-    let time_unit = document.getElementById("time_unit").value;
-
-    time_amount = time_amount * time_unit; 
-    total_time += time_amount;
-}
-
 document.getElementById("remove_time").onclick = function clock(){
     let time_amount = document.getElementById("time_modify").value;
     let time_unit = document.getElementById("time_unit").value;
 
-    time_amount = time_amount * time_unit; 
-    
-    if (total_time > time_amount){
+    time_amount = time_amount * time_unit;
+
+    if (total_time > time_amount){ 
     total_time -= time_amount;
     } else if (total_time <= time_amount){
         total_time = 0;
     }
 }
+
+document.getElementById("add_time").addEventListener("click", function addTime() {
+    let timeAmount = parseFloat(document.getElementById("time_modify").value);
+    let timeUnit = document.getElementById("time_unit").value;
+  
+    switch (timeUnit) {
+      case "1":
+        total_time += timeAmount;
+        break;
+      case "60":
+        total_time += timeAmount * 60;
+        break;
+      case "3600":
+        total_time += timeAmount * 3600;
+        break;
+      case "86400":
+        total_time += timeAmount * 86400;
+        break;
+      default:
+        console.error("Invalid time unit selected");
+        return;
+    }
+  });
 
 function countdown_timer(total_time){
     //ini
@@ -82,10 +97,6 @@ function countdown_timer(total_time){
     let dp_min = min - (hr*60);
 
     let dp_sec = sec - (min * 60);
-
-    console.log(dp_day , dp_hr, dp_min ,dp_sec);
-    console.log(total_time);
-    console.log(ind);
 
     document.getElementById("display_day").innerHTML = dp_day;
     document.getElementById("display_hr").innerHTML = dp_hr;
